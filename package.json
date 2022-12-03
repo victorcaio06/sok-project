@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+    "start:dev": "ts-node-dev --transpile-only --inspect --exit-child --ignore-watch node_modules --respawn --watch src,prisma src/server.ts"
   },
   "repository": {
     "type": "git",
