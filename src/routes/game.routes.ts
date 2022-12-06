@@ -25,7 +25,7 @@ gameRouter.get('/getGame/:id', (request, response) => {
   return seeGameController.handle(request, response);
 })
 
-gameRouter.put('/updateGame/:id', (request, response) => {
+gameRouter.patch('/updateGame/:id', (request, response) => {
   return updateGameController.handle(request, response);
 });
 
