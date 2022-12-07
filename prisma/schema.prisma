@@ -24,8 +24,8 @@ model Monsters {
   description String?
   loot        String?
   additional  String?
-  islands     Islands @relation(fields: [islandsId], references: [name])
-  islandsId   String  
+  islands     Islands? @relation(fields: [islandsId], references: [name])
+  islandsId   String?
 }
 
 model Islands {
