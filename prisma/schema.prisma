@@ -10,26 +10,28 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Game {
-  id Int @id @default(autoincrement())
+  id          Int     @id @default(autoincrement())
   description String
-  warning String?
-  additional String?
+  warning     String?
+  additional  String?
 }
 
 model Monsters {
-  name String @id
-  hability Int
-  life Int
+  name        String  @id
+  hability    Int
+  life        Int
   description String?
-  loot String?
-  additional String?
+  loot        String?
+  additional  String?
+  islands     Islands @relation(fields: [islandsId], references: [name])
+  islandsId   String
 }
 
 model Islands {
-  name String @id
+  name        String     @id
   description String
-  warning String?
-  additional String?
+  warning     String?
+  additional  String?
+  Monsters    Monsters[]
 }
