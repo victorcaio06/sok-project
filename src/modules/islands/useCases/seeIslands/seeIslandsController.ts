@@ -6,13 +6,13 @@ export default class SeeIslandsController {
 
   async handle(request: Request, response: Response): Promise<Response> {
     const { name } = request.params;
-
+    let getIsland;
     try {
-      await this.seeIslandsUseCase.execute(name);
+      getIsland = await this.seeIslandsUseCase.execute(name);
     } catch (error) {
       return response.status(400).json({ error });
     }
 
-    return response.status(200).json({});
+    return response.status(200).json({getIsland });
   }
 }
