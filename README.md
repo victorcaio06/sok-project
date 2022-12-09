@@ -2,6 +2,11 @@
 ## Mapa
 
 ![Mapa](./src/images/WhatsApp%20Image%202022-12-09%20at%2017.36.48.jpeg)
+
+## Ficho do Jogador
+
+![Ficha do jogador](./src/images/status.jpeg)
+
 ## Troll
 ![Carta do Troll](./src/images/Troll.png)
 ## Draugr
